@@ -1,6 +1,7 @@
 {
-  "name": "Piano-Website",
+  "name": "react-piano-basic-demo",
   "version": "1.0.0",
+  "homepage": "./PianoWebsite",
   "description": "",
   "keywords": [],
   "main": "src/index.js",
