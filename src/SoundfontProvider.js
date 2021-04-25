@@ -1,5 +1,3 @@
-// See https://github.com/danigb/soundfont-player
-// for more documentation on prop options.
 import React from 'react';
 import PropTypes from 'prop-types';
 import Soundfont from 'soundfont-player';
