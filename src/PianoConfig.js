@@ -74,18 +74,14 @@ class PianoConfig extends React.Component {
     });
   };
 
-  onChangeInstrument = (event) => {
-    this.props.setConfig({
-      instrumentName: event.target.value,
-    });
-  };
+
 
   render() {
     const midiNumbersToNotes = MidiNumbers.NATURAL_MIDI_NUMBERS.reduce((obj, midiNumber) => {
       obj[midiNumber] = MidiNumbers.getAttributes(midiNumber).note;
       return obj;
     }, {});
-    const { noteRange, instrumentName } = this.props.config;
+    const { noteRange } = this.props.config;
 
     return (
       <div className="form-row">
