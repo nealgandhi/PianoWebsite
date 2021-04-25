@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {MidiNumbers } from 'react-piano';
 import 'react-piano/dist/styles.css';
 
 import PianoDemo from './Piano';
