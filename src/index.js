@@ -28,8 +28,13 @@ function App() {
       <div class="container">
         <div class="m-auto text-center mx-4 w-full">
           <p>Use the keys on your keyboard that correspond to the letters on the keys to play the notes! 
-              Shif the starting the starting note with the left and right arrow keys!
+              Shift the starting the starting note with the left and right arrow keys! 
           </p>
+        </div>
+      </div>
+      <div class = "container">
+        <div class="m-auto text-center mx-4 w-full">
+          <p>Made by Neal Gandhi using React</p>
         </div>
       </div>
     </div>
