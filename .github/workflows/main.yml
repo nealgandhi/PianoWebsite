@@ -1,0 +1,43 @@
+name: Deploy to GH Pages
+
+# Controls when the action will run.
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  push:
+    branches: [main]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+    environment: Deployment
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+      - run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+      # Set up Node
+      - name: Use Node.js 15
+        uses: actions/setup-node@v1
+        with:
+          node-version: '15'
+      # Build the site
+      - name: Build site
+        run: |
+          npm install
+          npm run build
+      # Deploy to gh-pages branch
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@3.7.1
+        with:
+          BRANCH: gh-pages
+          FOLDER: build
+          COMMIT_MESSAGE: Automated build from Github Action
