@@ -1,11 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Piano, KeyboardShortcuts, MidiNumbers } from 'react-piano';
+import {MidiNumbers } from 'react-piano';
 import 'react-piano/dist/styles.css';
 
 import PianoDemo from './Piano';
-import DimensionsProvider from './DimensionsProvider';
-import SoundfontProvider from './SoundfontProvider';
 
 
 // webkitAudioContext fallback needed to support Safari
@@ -16,11 +14,6 @@ const noteRange = {
   first: MidiNumbers.fromNote('c3'),
   last: MidiNumbers.fromNote('f4'),
 };
-const keyboardShortcuts = KeyboardShortcuts.create({
-  firstNote: noteRange.first,
-  lastNote: noteRange.last,
-  keyboardConfig: KeyboardShortcuts.HOME_ROW,
-});
 
 function App() {
   return (
