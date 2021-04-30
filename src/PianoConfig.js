@@ -99,7 +99,7 @@ class PianoConfig extends React.Component {
             ))}
           </AutoblurSelect>
         </div>
-        <div className="col-3">
+        <div className="col-3 ">
           <Label>Last note</Label>
           <AutoblurSelect
             className="form-control"
@@ -113,13 +113,15 @@ class PianoConfig extends React.Component {
             ))}
           </AutoblurSelect>
         </div>
-        <div className="col mt-2">
+        <div className="col mt-2 text-center">
           <small className="text-muted">
             Use <strong>First Note Dropdown</strong> and <strong>Last Note Dropdown</strong> to change the 
-            first and last notes of the piano.
+            first and last notes of the piano. Shift the starting the starting note with the left and 
+            right arrow keys! 
           </small>
         </div>
       </div>
+      
     );
   }
 }

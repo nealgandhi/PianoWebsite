@@ -45,7 +45,7 @@ class PianoDemo extends React.Component {
                     playNote={playNote}
                     stopNote={stopNote}
                     disabled={isLoading}
-                    width={containerWidth * 1.75}
+                    width={containerWidth * 1.25}
                   />
                 )}
               </DimensionsProvider>
